@@ -12,7 +12,7 @@ export class DiscountOnAbstractSelling extends AbstractSelling {
 
   getPrice(): number {
     if (this.isDiscount) {
-      return Number((this.product.priceProduct * this.count * 0.9).toFixed(2));
+      return Number((this.product.priceProduct * this.count * (1 - 10 / 100)).toFixed(2));
     } else {
       return Number((this.product.priceProduct * this.count).toFixed(2));
     }
